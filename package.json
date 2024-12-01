@@ -1,0 +1,52 @@
+{
+    "name": "kwd-dashboard",
+    "version": "0.0.1",
+    "description": "Responsive dashboard built with tailwindcss alpinejs",
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "serve": "run-p css:watch html:serve",
+        "prod": "run-s css:build",
+        "css:watch": "tailwindcss -i ../Laravel-test/public/src/tailwind.css -o ../Laravel-test/public/css/tailwind.css -w",
+        "css:build": "tailwindcss -i ../Laravel-test/public/src/tailwind.css -o ../Laravel-test/public/css/tailwind.css -m",
+        "html:serve": "live-server ./public",
+        "predeploy": "run-s css:build",
+        "deploy": "gh-pages -d public"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.2",
+        "alpinejs": "^3.4.2",
+        "autoprefixer": "^10.4.2",
+        "axios": "^1.1.2",
+        "gh-pages": "^3.2.3",
+        "laravel-vite-plugin": "^0.7.2",
+        "live-server": "^1.1.0",
+        "npm-run-all": "^4.1.5",
+        "postcss": "^8.4.6",
+        "tailwindcss": "^3.1.0",
+        "vite": "^4.0.0"
+    },
+    "keywords": [
+        "dashboard",
+        "tailwindcss",
+        "layout",
+        "alpinejs",
+        "admin",
+        "template"
+    ],
+    "author": {
+        "name": "Ahmed Kamel",
+        "email": "ak3849909@gmail.com",
+        "url": "https://github.com/Kamona-WD"
+    },
+    "license": "MIT",
+    "prettier": {
+        "semi": false,
+        "singleQuote": true,
+        "printWidth": 120
+    },
+    "dependencies": {
+        "chart.js": "^4.3.0"
+    }
+}
